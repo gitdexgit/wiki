@@ -1,3 +1,6 @@
+
+#
+
 # IBE: The Discovery Phase of Reasoning
 
 **Core Principle:** Inference to the Best Explanation (IBE) is the process of reasoning from a set of observations to the most plausible cause. It is the logical "detective work" that allows us to move from raw data to a working theory.
