@@ -1,19 +1,4 @@
 
-# FILE: 3 principles to apply to any data.md
----
-
-These will help me filter data really fast in scratch and really insure that what I'm about to learn is worth the time, or I'm about to introduce is worth it.
-
-
-
-- First Principles removes the Sludge (Analogies/Assumptions).
-
-- Inversion removes the Stupidity (Failure paths).
-
-- Falsification removes the Lies (False notes).
-
-
-
 # FILE: algorithm - the 5 steps process of engineering popularized by elon must.md
 ---
 
@@ -36,21 +21,6 @@ These will help me filter data really fast in scratch and really insure that wha
 
 
 
-# FILE: an advice when the convenience is a downgrade to the goal to look for something else.md
----
-
-In any given system you want to make sure that the convenience factor of the
-tools you are using doesn't hurt the goal or performance you are trying to
-achieve, just because something can save you time or can do something for you
-doesn't mean you shouldn't do it. If the process of actually doing it
-contributes to the goal and you want to do it faster then look for other better
-ways that are not necessary the best but at least they make you do it faster and
-do it yourself when the process requires you to actually do the thing, for
-example learning, no one can learn for you you still need to learn yourself.
-
-
-
-
 # FILE: cli - command to watch autoshot script.md
 ---
 
@@ -68,7 +38,34 @@ https://i.imgur.com/KMy6eqI.png
 
 
 
-# FILE: cli - Use watson command to track mode 1 type 1 hours for business for money.md
+# FILE: cli - how to run a command as a job.md
+---
+
+Append `&` to `<command>`:
+
+Run `<command> &`
+
+
+
+
+# FILE: cli - the reflector command to refresh mirrors.md
+---
+
+
+#cli
+
+This is a reflector command that I keep forgetting to run from time to time to get
+newest latest good mirrors to improve the speed of updating in `pacman -Suy`  and
+also in `paru -Suy` though in paru I recommend you run a VPN to help with github.
+
+
+```bash
+sudo reflector --verbose --latest 10 --number 5 --country Morocco,Spain,Portugal,France --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --download-timeout 10
+```
+
+
+
+# FILE: cli - use watson command to track mode 1 type 1 hours for business for money.md
 ---
 
 # Maximize Your Billable Efficiency
@@ -123,18 +120,37 @@ Check your progress to see where your time went and if you are being efficient.
 
 
 
-# FILE: code defined by cs50 youtube video from harvard.md
+# FILE: computer - what is the first principle of computing.md
 ---
 
-Code is just taking inputs; The input is some standardized way of representation of
-information and spitting out answers.
+First principle of computing:
+> If it is programmable, it needs an ISA (Instruction Set Architecture).
 
-https://youtu.be/UuIEbpQms8o?t=3905
-![](https://youtu.be/UuIEbpQms8o?t=3905)
+Programmable = Can follow instructions.
+
+ISA = The list of instructions it can follow.
+
+No ISA = Not programmable.
+
+---
+
+Humans are programmable: Because they can follow instructions too:
+
+Input: Language (Assembly).
+
+Decode: Brain maps word to meaning (ISA).
+
+Execute: Nerve signals (Machine Code) move muscle (Hardware).
+
+---
+
+Programmable: "Tell me what to do." (Needs Language/ISA).
+
+Fixed: "I only do what I am." (No Language needed).
 
 
 
-# FILE: def - computer science being defined in a video course CS50 in 2hrs.md
+# FILE: def - computer science being defined in a video course cs50 in 2hrs.md
 ---
 
 Just watch the video if you forget about CS, Computational thinking, Algorithms.
@@ -166,7 +182,48 @@ Then, and only then, does it move to ~/work/active or it has no ? at as a title 
 
 
 
-# FILE: fix school.md
+# FILE: general - 3 principles to apply to any data.md
+---
+
+These will help me filter data really fast in scratch and really insure that what I'm about to learn is worth the time, or I'm about to introduce is worth it.
+
+
+
+- First Principles removes the Sludge (Analogies/Assumptions).
+
+- Inversion removes the Stupidity (Failure paths).
+
+- Falsification removes the Lies (False notes).
+
+
+
+# FILE: general - an advice when the convenience is a downgrade to the goal to look for something else.md
+---
+
+In any given system you want to make sure that the convenience factor of the
+tools you are using doesn't hurt the goal or performance you are trying to
+achieve, just because something can save you time or can do something for you
+doesn't mean you shouldn't do it. If the process of actually doing it
+contributes to the goal and you want to do it faster then look for other better
+ways that are not necessary the best but at least they make you do it faster and
+do it yourself when the process requires you to actually do the thing, for
+example learning, no one can learn for you you still need to learn yourself.
+
+
+
+
+# FILE: general - code defined by cs50 youtube video from harvard.md
+---
+
+Code is just taking inputs; The input is some standardized way of representation of
+information and spitting out answers.
+
+https://youtu.be/UuIEbpQms8o?t=3905
+![](https://youtu.be/UuIEbpQms8o?t=3905)
+
+
+
+# FILE: general - fix school part1.md
 ---
 
 
@@ -272,8 +329,27 @@ You can't use your hands if you don't have the tools. Buy these as you need them
 
 
 
+# FILE: general - fix school part2.md
+---
 
-# FILE: implement the 5 why method to find the root cause.md
+
+
+
+
+# FILE: general - how to run video on firefox at 3x speed.md
+---
+
+Open browser console:
+
+Then type:
+
+```js
+document.querySelector('video').playbackRate = 3
+```
+
+
+
+# FILE: general - implement the 5 why method to find the root cause.md
 ---
 
 This is beta
@@ -291,10 +367,223 @@ The method assumes that you know a system enough so that when it breaks you can 
 
 
 
-# FILE: linux is for people who are trying to make things work.md
+# FILE: general - in cpu how to make cpu not heat as much.md
+---
+
+
+Use this thermald:
+
+ - thermald is a Linux daemon used to prevent the overheating of platforms. This daemon monitors temperature and applies compensation using available cooling methods.
+
+ - By default, it monitors CPU temperature using available CPU digital temperature sensors and maintains CPU temperature under control, before HW takes aggressive correction action.
+
+
+---
+
+It helps a lot. I use it for this trash computer... btw this thermald is good you can put your cpu at performance and like make it use max clock speed but like enable thermald so that if you are compiling or using cpu 100 or maybe because of heat it reduces it but when it's around 10~60% you enjoy the max speed. So it's a good balance and also protects the computer cpu from heat.
+
+
+
+# FILE: general - linux is for people who are trying to make things work.md
 ---
 
 Linux is a place where fking people like me nerds or whatever you wanna call them that spend a lot of time in front of the computer where they try their best to make things work... It might be a bad idea... potentially useless and lead to catastrofic results but. At least they try. Hopefully the experience can be put into other things and it is not lost.
+
+
+
+# FILE: general - people are switching to llms because they are tired for google search enginge being not as it used to be.md
+---
+
+People are switching to ChatGPT/or other models because they are tired of clicking through 10 pages of "SEO Spam" and "Ads" just to find a simple answer. They would rather have a Generative model just "Predict" the answer for them directly.
+
+They are also switching to other alternatives such as searxng
+
+
+
+# FILE: general - properties of a truth fundamental.md
+---
+
+to help me find truth fundamentals, they should have these bellow characteristics:
+
+@ai:
+A truth is fundamental if:
+
+    It is Tool-Independent (Works in C, Python, and Assembly).
+
+    It is Universal (Works on Linux, Windows, and a Toaster).
+
+    It is a Constraint (You cannot "code your way around" it).
+
+    It has no "It's like..." in the definition.
+
+Don't worry about being "Right" on day one. Worry about being "Deep." Keep digging until you hit the hardware or the physics. That is where the "Gold" for an inventor is buried.
+
+
+
+# FILE: general - services.md
+---
+
+ Model 7:28 AM
+Create file `~/wiki/services.md`. Keep it simple.
+
+### Services Wiki
+
+| Name | Command | Why |
+| :--- | :--- | :--- |
+| **Search** | `sudo systemctl start docker` | Run SearXNG |
+| **VMs** | `sudo systemctl start libvirtd` | Run Virt-Manager |
+| **VPN** | `sudo systemctl start tailscaled` | Remote Access |
+| **AI** | `sudo systemctl start ollama` | Local LLM |
+| **Security** | `sudo systemctl start fail2ban` | Protect SSH |
+
+### Caveman Tips:
+1. **SearXNG**: If you use daily, keep Docker on. If heat high, stop it.
+2. **Avahi**: Safe to `disable --now`. It finds printers/Macs on network. You no need.
+3. **Ollama**: 3B model in RAM is fine, but Ollama background process checks GPU/CPU often. `stop` when not chatting.
+4. **Fail2ban**: Only need if `sshd` is open to public web. If only Tailscale, Tailscale has own security. Can stop both.
+
+
+
+# FILE: general - sharpening the axe philosophy.md
+---
+
+This principle is known as the **P/PC Balance** (Production vs. Production Capability), popularized by Stephen Covey. It is more commonly called **"Sharpening the Axe."**
+
+# Maintain Growth Velocity
+
+Neglecting your skill set while focusing solely on output leads to inevitable obsolescence and burnout.
+
+Sustaining high-level performance requires balancing two competing forces:
+
+### 1. The Output (80% of Time)
+Focus on execution and results. This generates immediate value, pays the bills, and fulfills current commitments. Spending 100% of your time here makes you a "blunt tool"—you work harder and harder for smaller and smaller gains.
+
+### 2. The Investment (20% of Time)
+Focus on "Sharpening the Axe." Use this time to upgrade your tools, learn new languages, and refine your workflow. This ensures that your future "Output" hours are faster, easier, and more valuable.
+
+### The Objective
+Tracking these as separate categories allows you to audit your **Golden Ratio**.
+*   If **Investment** is 0%, you are decaying.
+*   If **Investment** is 100%, you are a hobbyist with no income.
+
+**The Goal:** Target a 10%–20% tax on your week for growth to ensure you remain both profitable today and relevant tomorrow.
+
+
+
+# FILE: general - the 6 socratic type questions used for critical thinking a scratch.md
+---
+
+So here are the types of questions you should ask when you are attacking in your scratch. The main idea is to ask questions so that you are not stuck in the why? why? why? why? loop, even though why? why? is good another approach or tools are just using good questions that target specific areas when you are in the scratch.
+
+Good questions to start are the evaluation questions and then you move your way down. So you are working on bloom's taxonomy higher level. Studies show that, if you know the "So what?" and like work at the evaluation part it's more rewarding and easier to understand and remember and apply better. So work on the higher levels for and even analyse as well.
+
+
+@ai:
+How to use these in your scratch.md
+
+When you are transcribing and you feel the "urge to attack," don't just write "This is wrong." Pick a skillshot:
+
+    Clarify: "Define [X] better."
+
+    Assume: "You're assuming [X], but what if [Y]?"
+
+    Evidence: "Show me the logs for this."
+
+    Perspective: "An expert in [X] would call this trash because..."
+
+    Consequence: "This leads to [X] failure later."
+
+    Meta: "This whole topic is a distraction from the real goal."
+
+The "Triangle" Example using the 6 Types:
+
+    Source: "A triangle is a shape."
+
+    Clarification: "What kind of shape? 2D or 3D?"
+
+    Assumption: "Are you assuming the lines must be straight?"
+
+    Evidence: "Can you show me a triangle with 4 sides? No? Then '3 sides' is the requirement."
+
+    Perspective: "A topologist might say a triangle and a circle are the same. Why are we focusing on the sides?"
+
+    Consequence: "If I define it this way, does it exclude 'curved' triangles on a sphere?"
+
+    Meta: "Does defining a triangle actually help me build this bridge?"
+
+
+
+# FILE: general - there are 3 types of people who use the computer.md
+---
+
+The users: People who use software for something
+
+The programmers: People who make software work
+
+The hackers: People who hack the software
+
+
+
+# FILE: general - there are always 2 things in to do.md
+---
+
+Always all the time you will be doing 2 things. Things you have to do and things you want to do. So when thinking about to do that's how you think.
+
+Things you want to do are things that you want. Can be anything. On the other hand, Things you have to do are things in regards to the big picture. Like doing things you don't want to in order to fill your stomach.
+
+A trick to know them is to imagine yourself like there are 2 of you or 3 of you and you can experience all of their senses and control them because they are you. And then you try to imagine or think what you want to do and what you have to do. It's not guaranteed to work but at least it helps
+
+
+
+# FILE: general - valgrind is a popular too for managing memory and debugging c code so use it.md
+---
+
+I did `sudo pacman -S valgrind`
+
+@ai:
+
+Yes, Valgrind is extremely popular—it is considered the industry standard for memory debugging and profiling on Linux, particularly for C and C++ development.[1]
+
+Since you are on Arch Linux and using both C and Python, here is how it fits into your workflow
+
+
+
+some notes make what is bellow an alternative so valgrid? But only after I actually try it out lol I don't even know what this is:
+
+
+Is there a modern alternative?
+
+While Valgrind is very popular, many developers have moved toward AddressSanitizer (ASan) for C programming.[1]
+
+    Valgrind: Works on the binary; very thorough; makes the program run 10x–30x slower.[1][4]
+
+    ASan: Built into the compiler (-fsanitize=address); much faster (only 2x slower); but requires recompiling your code.[1][2]
+
+Conclusion: For a Linux developer writing C, Valgrind is a "required skill" for your resume and a lifesaver for your code. For Python, it's a specialized "heavy-duty" tool you'll only need when things go seriously wrong at the system level.
+
+
+
+# FILE: in obs how to fix failed to start virtual camera - how to enable virtual cam.md
+---
+
+Answer:
+
+```bash
+sudo modprobe v4l2loopback exclusive_caps=1
+```
+
+Note:
+
+Install v4l2loopback-dkms and linux-headers first.
+
+```bash
+sudo pacman -S v4l2loopback-dkms
+```
+
+```bash
+sudo pacman -S linux-headers
+```
+
 
 
 
@@ -407,7 +696,7 @@ In Mode 2, use two tags to monitor intentional energy expenditure:
 
 
 
-# FILE: method - upgrade the mode 2 for ease of searchability by adding sub-categories  to the main category.md
+# FILE: method - upgrade the mode 2 for ease of searchability by adding sub categories to the main category.md
 ---
 
 That is a pro-level observation. You are essentially using an **Internal Sub-Labeling** technique within your narrative.
@@ -557,32 +846,59 @@ The `r` flag in `formatoptions` continues the current comment leader (`>`) after
 
 
 
-# FILE: people are switching to llms because they are tired for google search enginge being not as it used to be.md
+# FILE: nvim - surround shortcuts.md
 ---
 
-People are switching to ChatGPT/or other models because they are tired of clicking through 10 pages of "SEO Spam" and "Ads" just to find a simple answer. They would rather have a Generative model just "Predict" the answer for them directly.
 
-They are also switching to other alternatives such as searxng
+Usage
+
+The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement}, respectively. For the following examples, * will denote the cursor position:
+
+
+Old text                    Command         New text
+--------------------------------------------------------------------------------
+    surr*ound_words             ysiw)           (surround_words)
+    surr*ound_words             ysiw(           ( surround_words )
+    *make strings               ys$"            "make strings"
+    [delete ar*ound me!]        ds]             delete around me!
+    remove <b>HTML t*ags</b>    dst             remove HTML tags
+    'change quot*es'            cs'"            "change quotes"
+    <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1>
+    delete(functi*on calls)     dsf             function calls
+
+
+Note that surrounding with an opening delimiter (e.g. () will add a space before/after the selection, while surrounding with the closing delimiter (e.g. )) will not include the spaces. Detailed information on how to use this plugin can be found in `:h nvim-surround.usage.`
 
 
 
-# FILE: properties of a truth fundamental.md
+# FILE: phone - how to fix phone virtual display size without changing physical screen dimensions.md
 ---
 
-to help me find truth fundamentals, they should have these bellow characteristics:
+Use the `adb` to set your virtual display size.
 
-@ai:
-A truth is fundamental if:
+Example:
 
-    It is Tool-Independent (Works in C, Python, and Assembly).
+If you want to set it to 500x1040 or
+520x1060, you would run:
 
-    It is Universal (Works on Linux, Windows, and a Toaster).
+```sh
+adb shell wm size 500x1040
+```
 
-    It is a Constraint (You cannot "code your way around" it).
+And just adjust the whatever comes after the x. --> x1040 --> x1060 and keep adjusting and see what you like until it fits.
 
-    It has no "It's like..." in the definition.
+```sh
+adb shell wm size 500x1060
+```
 
-Don't worry about being "Right" on day one. Worry about being "Deep." Keep digging until you hit the hardware or the physics. That is where the "Gold" for an inventor is buried.
+Or from up to down if you want to adjust the screen a bit play with the first number. And that's it
+
+Remember:
+
+```sh
+adb shell wm size <{value}x{value}>
+```
+
 
 
 
@@ -599,76 +915,20 @@ This way I don't need to keep a phone session going all day
 
 
 
-# FILE: sharpening the axe philosophy.md
+# FILE: taskwarrior - how to force watch task in cli to have color when the c flag fails.md
 ---
 
-This principle is known as the **P/PC Balance** (Production vs. Production Capability), popularized by Stephen Covey. It is more commonly called **"Sharpening the Axe."**
+Just run:
 
-# Maintain Growth Velocity
+```
+watch -n 3 -c "task rc._forcecolor:on"
+```
 
-Neglecting your skill set while focusing solely on output leads to inevitable obsolescence and burnout.
-
-Sustaining high-level performance requires balancing two competing forces:
-
-### 1. The Output (80% of Time)
-Focus on execution and results. This generates immediate value, pays the bills, and fulfills current commitments. Spending 100% of your time here makes you a "blunt tool"—you work harder and harder for smaller and smaller gains.
-
-### 2. The Investment (20% of Time)
-Focus on "Sharpening the Axe." Use this time to upgrade your tools, learn new languages, and refine your workflow. This ensures that your future "Output" hours are faster, easier, and more valuable.
-
-### The Objective
-Tracking these as separate categories allows you to audit your **Golden Ratio**.
-*   If **Investment** is 0%, you are decaying.
-*   If **Investment** is 100%, you are a hobbyist with no income.
-
-**The Goal:** Target a 10%–20% tax on your week for growth to ensure you remain both profitable today and relevant tomorrow.
+And wow the command colors the output of task warrior.
 
 
 
-# FILE: the 6 socratic type questions used for critical thinking a scratch.md
----
-
-So here are the types of questions you should ask when you are attacking in your scratch. The main idea is to ask questions so that you are not stuck in the why? why? why? why? loop, even though why? why? is good another approach or tools are just using good questions that target specific areas when you are in the scratch.
-
-Good questions to start are the evaluation questions and then you move your way down. So you are working on bloom's taxonomy higher level. Studies show that, if you know the "So what?" and like work at the evaluation part it's more rewarding and easier to understand and remember and apply better. So work on the higher levels for and even analyse as well.
-
-
-@ai:
-How to use these in your scratch.md
-
-When you are transcribing and you feel the "urge to attack," don't just write "This is wrong." Pick a skillshot:
-
-    Clarify: "Define [X] better."
-
-    Assume: "You're assuming [X], but what if [Y]?"
-
-    Evidence: "Show me the logs for this."
-
-    Perspective: "An expert in [X] would call this trash because..."
-
-    Consequence: "This leads to [X] failure later."
-
-    Meta: "This whole topic is a distraction from the real goal."
-
-The "Triangle" Example using the 6 Types:
-
-    Source: "A triangle is a shape."
-
-    Clarification: "What kind of shape? 2D or 3D?"
-
-    Assumption: "Are you assuming the lines must be straight?"
-
-    Evidence: "Can you show me a triangle with 4 sides? No? Then '3 sides' is the requirement."
-
-    Perspective: "A topologist might say a triangle and a circle are the same. Why are we focusing on the sides?"
-
-    Consequence: "If I define it this way, does it exclude 'curved' triangles on a sphere?"
-
-    Meta: "Does defining a triangle actually help me build this bridge?"
-
-
-
-# FILE: The Prussian Model - keep a man dependent.md
+# FILE: the prussian model - keep a man dependent.md
 ---
 
 If you teach a man to fix a car, he becomes independent. If you teach a man to memorize the history of a car, he still needs to hire someone else to fix it. The Prussian Model prefers the second guy because he is easier to manage and remains dependent on the system.
@@ -679,29 +939,7 @@ This system is used every where in every society. This system is the source of a
 
 
 
-# FILE: there are 3 types of people who use the computer.md
----
-
-The users: People who use software for something
-
-The programmers: People who make software work
-
-The hackers: People who hack the software
-
-
-
-# FILE: there are always 2 things in to do.md
----
-
-Always all the time you will be doing 2 things. Things you have to do and things you want to do. So when thinking about to do that's how you think.
-
-Things you want to do are things that you want. Can be anything. On the other hand, Things you have to do are things in regards to the big picture. Like doing things you don't want to in order to fill your stomach.
-
-A trick to know them is to imagine yourself like there are 2 of you or 3 of you and you can experience all of their senses and control them because they are you. And then you try to imagine or think what you want to do and what you have to do. It's not guaranteed to work but at least it helps
-
-
-
-# FILE: use second-order thinking to ensure your short-term wins don't become long-term disasters.md
+# FILE: use second - order thinking to ensure your short term wins dont become long term disasters.md
 ---
 
 Basically think of the results of your actions, like ok you will do that, you will gain x, but at what cost, meaning what happens next? If the cost is so high then don't take it. If the benefits outweighs the cost or there is little to no cost, take it.
@@ -733,33 +971,5 @@ A note has high utility if it prevents a future disaster rather than just statin
 
 ***
 
-
-
-
-# FILE: valgrind is a popular too for managing memory and debugging c code so use it.md
----
-
-I did `sudo pacman -S valgrind`
-
-@ai:
-
-Yes, Valgrind is extremely popular—it is considered the industry standard for memory debugging and profiling on Linux, particularly for C and C++ development.[1]
-
-Since you are on Arch Linux and using both C and Python, here is how it fits into your workflow
-
-
-
-some notes make what is bellow an alternative so valgrid? But only after I actually try it out lol I don't even know what this is:
-
-
-Is there a modern alternative?
-
-While Valgrind is very popular, many developers have moved toward AddressSanitizer (ASan) for C programming.[1]
-
-    Valgrind: Works on the binary; very thorough; makes the program run 10x–30x slower.[1][4]
-
-    ASan: Built into the compiler (-fsanitize=address); much faster (only 2x slower); but requires recompiling your code.[1][2]
-
-Conclusion: For a Linux developer writing C, Valgrind is a "required skill" for your resume and a lifesaver for your code. For Python, it's a specialized "heavy-duty" tool you'll only need when things go seriously wrong at the system level.
 
 

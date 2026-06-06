@@ -98,4 +98,3 @@ You can't use your hands if you don't have the tools. Buy these as you need them
 > tools to do so. It’s a trap, and the only way out is to teach yourself the
 > practical things the system refuses to touch.
 
-
