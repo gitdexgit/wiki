@@ -11,3 +11,13 @@ exec_always --no-startup-id xsetroot -solid "#000000"
 ```
 
 Now you don't need to write it manually every single time. But write it manually why not?
+
+
+Sometimes if it still is persistence because of having a compositor or something you can do:
+
+```bash
+hsetroot -solid '#000000'
+```
+
+If you don't have `hsetroot` then install it using your package manager.
+
